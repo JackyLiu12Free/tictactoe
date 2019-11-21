@@ -1,11 +1,5 @@
-
-
-
-
-
-
-
 $("#button1").click(function() {
+    console.log("hi");
     performLogic("#button1","#tile1");
 });
 
@@ -40,4 +34,32 @@ $("#button8").click(function() {
 $("#button9").click(function() {
     performLogic("#button9","#tile9");
 });
+
+let player = "O" 
+let gameEnd= "false"
+let turns = 0 
+
+function switch (){ 
+turns = turns + 1;
+
+
+}
+function performLogic (button,tile) {
+$(button).hide();
+switch();
+}
+
+
+function tie () {
+  if (turns > 8 && gameEnd="false") { 
+  gameEnd = "true"
+  $("h1").text("It's a Tie!");
+  }  
+}
+
+
+
+
+
+
 
